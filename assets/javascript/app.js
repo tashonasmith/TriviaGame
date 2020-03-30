@@ -38,7 +38,7 @@ var answers = [choices1[1], choices2[2], choices3[0], choices4[3]];*/
 
 
 var running = false;
-var time = 16;
+var time = 31;
 
 
 
