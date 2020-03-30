@@ -60,6 +60,14 @@ label {
     margin-bottom: 25px;
 }
 
+#done {
+    width: 60px;
+    height: 40px;
+    background-color: yellow;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
 #message1 {
     font-family: 'Lato', sans-serif;
     padding-bottom: 20px;
