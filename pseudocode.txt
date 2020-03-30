@@ -1,6 +1,6 @@
 //Start with page showing Trivia game title and Start button
 //When Start button is clicked, origin page clears
-//On new page create :30 second timer
+//On new page create :15 second timer
 //Also create form containing trivia questions and multiple choice answers
 //create done button at the bottom
 //When done button is clicked, or when time runs out, time stops, page content clears

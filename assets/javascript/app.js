@@ -38,7 +38,9 @@ var answers = [choices1[1], choices2[2], choices3[0], choices4[3]];*/
 
 
 var running = false;
-var time = 31;
+var time = 16;
+
+
 
 $(document).ready(function() {
     $("#timer-div").hide();
@@ -62,26 +64,89 @@ function runTimer(){
 	if (!running) {
 	intervalId = setInterval(decrement, 1000); 
 	running = true;
-	}
+    }
 }
 
 function decrement() {
     time--;
     $("#timer-div").text("Time Left: " + time);
+    if (time === -1) {
+        console.log("timeup");
+        var timeUp = $("<h2>");
+        timeUp.text("Time's Up! Refresh your browser to try again!");
+        $("#results").append(timeUp);
+        $("#timer-div").hide();
+        $("#quiz-div").hide();
+        $("#done").hide();
+        $("#message1").hide();
+        $("#results").show();
+        $("#playAgain").hide();
+    };
 }
 
-var correct = 0
-var incorrect = 0
+var correct = 0;
+var incorrect = 0;
 
-//maybe make this part of a "when done button is clicked?"
 $('#done').click(function() {
     if($('#las-vegas').is(':checked')) {
     correct++;
-    console.log(correct);
+    console.log("correct: " + correct);
 } else {
     incorrect++;
-    console.log(incorrect);
+    console.log("incorrect: " + incorrect);
 }
+});
+
+$('#done').click(function() {
+    if($('#pooh-bear').is(':checked')) {
+    correct++;
+    console.log("correct: " + correct);
+} else {
+    incorrect++;
+    console.log("incorrect: " + incorrect);
+}
+});
+
+$('#done').click(function() {
+    if($('#october-3').is(':checked')) {
+    correct++;
+    console.log("correct: " + correct);
+} else {
+    incorrect++;
+    console.log("incorrect: " + incorrect);
+}
+});
+
+$('#done').click(function() {
+    if($('#dracula').is(':checked')) {
+    correct++;
+    console.log("correct: " + correct);
+} else {
+    incorrect++;
+    console.log("incorrect: " + incorrect);
+}
+});
+
+$('#done').click(function() {
+    if($('#tiger').is(':checked')) {
+    correct++;
+    console.log("correct: " + correct);
+} else {
+    incorrect++;
+    console.log("incorrect: " + incorrect);
+}
+});
+
+
+$("#done").click(function() {
+    $("#correct").text("Correct: " + correct);
+    $("#incorrect").text("Incorrect/Unanswered: " + incorrect);
+    $("#timer-div").hide();
+    $("#quiz-div").hide();
+    $("#done").hide();
+    $("#message1").show();
+    $("#results").show();
+    $("#playAgain").show();
 });
 
 
