@@ -1,5 +1,7 @@
 body {
-   background-image: url(../images/laugh-emoji.jpg); 
+   background-image: url(../images/laugh-emoji.jpg);
+   background-repeat: no-repeat;
+   background-size: cover; 
 }
 
 #game {
